@@ -14,13 +14,7 @@ function NotFound() {
             Click or tap the button below to return home.
 
         </p>
-        <button
-          onClick={() => {
-            nav("/");
-          }}
-        >
-          Go Back Home
-        </button>
+        <button onClick={() => {nav("/")}}>Go Back Home </button>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Results from "./pages/Results";
 import Settings from "./pages/Settings";
@@ -15,6 +16,9 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
+
+        <Navbar/>
+        
           
         </div>
       </div>

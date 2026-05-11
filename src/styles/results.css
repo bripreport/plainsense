@@ -1,72 +1,86 @@
-.results {
+.results-body {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
 
-#results-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 6px;
+#results-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#results-header p {
+#results-head p {
   font-size: 1rem;
   color: #555555;
   line-height: 1.4;
 }
 
-#issue-card,
-#steps-card,
-#results-actions {
+#query {
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #f8fafc;
+}
+
+#query h2 {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+#term-explanation {
   border: 1px solid #dddddd;
   border-radius: 16px;
   padding: 16px;
 }
 
-#issue-label,
-#steps-title {
+#term-explanation p {
   font-size: 1rem;
-  font-weight: bold;
+  color: #444444;
+  line-height: 1.45;
   margin-bottom: 10px;
 }
 
-#issue-card h2 {
-  font-size: 1.35rem;
-  margin-bottom: 8px;
+#term-explanation p:last-child {
+  margin-bottom: 0;
 }
 
-#issue-card p {
-  line-height: 1.4;
+#steps {
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+#steps > p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
 .step {
-  display: flex;
-  gap: 12px;
   border: 1px solid #eeeeee;
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 10px;
 }
 
-.step-number {
-  min-width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #1d4ed8;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+.step:last-child {
+  margin-bottom: 0;
 }
 
-#results-actions {
+.step p {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #000000;
+}
+
+#response-buttons {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-#results-actions button {
+#response-buttons button {
   width: 100%;
   border: none;
   border-radius: 12px;
@@ -76,20 +90,12 @@
   cursor: pointer;
 }
 
-#read-aloud-button,
-#visual-instructions-button {
-  background-color: #e5e7eb;
-  color: #111111;
-}
-
 #more-help-button {
   background-color: #1d4ed8;
   color: white;
 }
 
-
-
-#start-over-button {
+#return-home {
   background-color: white;
   color: #111111;
   border: 1px solid #cccccc !important;

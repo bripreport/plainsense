@@ -5,14 +5,15 @@ export default function Results() {
   const nav = useNavigate();
 
   const response = {
-    "type": "Wi-Fi or Internet Connection Problem",
-    "keyword_triggers": ["wifi", "internet", "offline", "network"],
-    "steps": [
-      "This is more common than it may seem. It usually just means your connection needs a moment.",
-      "Check that Wi-Fi is turned on.",
-      "Turn Wi-Fi off, wait a few seconds, then turn it back on.",
-      "Wait a moment while it reconnects.",
-      "Try opening the page again."
+    type: "Missing File Problem",
+    keyword_triggers: ["file", "missing", "can't find", "missing file"],
+    steps: [
+      "Your file is still exists. It might simply be in a different place on your computer.",
+      "Open the place where you normally keep your files.",
+      "Look in a folder named \"Downloads.\" ",
+      "Look in a folder named \"Documents.\" ",
+      "If possible, look for a magnifying glass icon and click on it. Type in the name of the file and hit \"Enter\".",
+      "Open the file if you see its name.",
     ]
   };
 
@@ -33,9 +34,6 @@ export default function Results() {
             </div>
 
             <div id="term-explanation"> 
-                <p>
-                    Your WiFi is what gives your phones, computer, and TVs a high speed internet connection. 
-                </p>
                 <p>{reassurance}</p>
             </div>
 

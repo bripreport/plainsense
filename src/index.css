@@ -34,3 +34,7 @@ input {
   background-color: white;
   padding: 24px 18px;
 }
+
+html {
+  overflow-y: scroll;
+} 
