@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eeeeee;
+    overflow: hidden;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+#app-layout{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+#screen-container {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background-color: white;
+  padding: 24px 18px;
+}

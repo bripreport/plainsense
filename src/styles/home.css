@@ -1,0 +1,109 @@
+.home {
+  width: 100%;
+   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#product-name {
+  padding-top: 8px;
+}
+
+#product-name h1 {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+}
+
+#product-name p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+#text-input-option,
+#photo-input-option,
+#message-to-user {
+  border: 1px solid #dddddd;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+#text-input-title,
+#photo-input-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+#text-input {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #cccccc;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+#text-input::placeholder{
+  color: #444444;
+}
+
+#text-help-button,
+#photo-help-button {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#text-help-button {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+#photo-help-button {
+  background-color: #e5e7eb;
+  color: #111111;
+}
+
+#text-input-description,
+#photo-input-description {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+#split-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #666666;
+}
+
+#split-input span {
+  flex: 1;
+  height: 1px;
+  background-color: #dddddd;
+}
+
+#split-input p {
+  font-size: 2rem;
+}
+
+#message-to-user p {
+  font-size: 1rem;
+  color: #444444;
+  line-height: 1.5;
+}
