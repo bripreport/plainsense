@@ -1,11 +1,11 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ResultsPage from "./pages/Results";
 import NotFound from "./pages/NotFound";
 
 function App() {
  return (
-    <BrowserRouter>
+    <HashRouter>
       <div id="app-layout">
         <div id="screen-container">
           <Routes>
@@ -17,7 +17,7 @@ function App() {
         </div>
       </div>
       
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
