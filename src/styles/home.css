@@ -103,7 +103,12 @@
 }
 
 #message-to-user p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  color: #444444;
+  line-height: 1.5;
+}
+#disclaimer p {
+  font-size: 0.8rem;
   color: #444444;
   line-height: 1.5;
 }

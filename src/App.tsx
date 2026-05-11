@@ -1,6 +1,7 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import ResultsPage from "./pages/Results";
+import Results from "./pages/Results";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
         <div id="screen-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/results" element={<ResultsPage />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/settings" element={<Settings />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
           

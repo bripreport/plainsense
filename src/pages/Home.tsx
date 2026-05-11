@@ -43,13 +43,22 @@ export default function Home() {
           <div id="message-to-user">
             <p>
                 PlainSense will explain things in clear and simple way. 
-                You can rest assure that any help provided will be safe and easy to do. 
+                Your issues are common technology problems and will not lead to you breaking the device or erasing important information.
+                You can rest assured that any help provided will be safe and easy to do. 
             </p>
+            <br />
           </div>
 
         </div>
-        
+
       </div>
     </div>
   );
 }
+
+{/* <div id="disclaimer">
+    <p>
+        PlainSense is not intended for advanced technical questions, viruses, dealing with scams, or other security-related issues. 
+        If you believe you may be at risk, contact someone you trust or a professional.
+    </p>
+</div> */}
