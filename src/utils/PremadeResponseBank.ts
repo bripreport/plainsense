@@ -103,8 +103,7 @@ const BasicResponseBank:ProblemType[] = [
       "If the message stays, check that your WiFi still looks connected.",
       "Try opening the page after checking your WiFi connection."
     ]
-  },
+  },   
+];
 
-
-    
-]
+export default BasicResponseBank;
