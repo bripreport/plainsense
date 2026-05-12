@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
-import {FaHome,FaUniversalAccess} from "react-icons/fa";
+import {FaHome} from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
 import "../styles/navbar.css";
 
 
@@ -18,7 +19,7 @@ export default function Navbar(){
 
         <div id="settings">
             <button onClick={() => nav("/settings")}>
-                <FaUniversalAccess/>
+                <IoMdSettings/>
             </button>
         </div>
     </div>

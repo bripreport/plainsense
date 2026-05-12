@@ -1,25 +1,42 @@
 import { useNavigate } from "react-router-dom";
+import type {ProblemType} from "../utils/PremadeResponseBank";
 import "../styles/results.css";
 
 export default function Results() {
   const nav = useNavigate();
 
-  const response = {
-    type: "Missing File Problem",
-    keyword_triggers: ["file", "missing", "can't find", "missing file"],
-    steps: [
-      "Your file is still exists. It might simply be in a different place on your computer.",
-      "Open the place where you normally keep your files.",
-      "Look in a folder named \"Downloads.\" ",
-      "Look in a folder named \"Documents.\" ",
-      "If possible, look for a magnifying glass icon and click on it. Type in the name of the file and hit \"Enter\".",
-      "Open the file if you see its name.",
-    ]
-  };
+ 
 
-  const reassurance = response.steps[0]
-  const steps = response.steps.slice(1);
+  const returnedResponse = localStorage.getItem("matched-response");
+  const result = returnedResponse ? JSON.parse(returnedResponse): null;
+    
+  if(result?.route === "llm") {
+        return(
+            <div className="results">
+                <div className="results-body">
+                    <p>Sorry, we could not answer your request. The LLM is unresponsive.</p>
+                    <button id="return-home" onClick={() => nav("/")}>Back to Home</button>
 
+                </div>
+            </div>
+        )
+    }
+  
+  if(!result || !result.response) {
+        return(
+            <div className="results">
+                <div className="results-body">
+                    <p>No results found. Please try again, we might not have understood your request.</p>
+                    <button id="return-home" onClick={() => nav("/")}>Back to Home</button>
+
+                </div>
+            </div>
+        )
+    }
+
+    const response = result?.response as ProblemType;
+    const reassurance = response.steps[0]
+    const steps = response.steps.slice(1);  
 
   return (
     <div className="results">
@@ -51,7 +68,7 @@ export default function Results() {
             </div>
 
             <div id="response-buttons">
-                <button id="more-help-button">Get More Help</button>
+                <button id="more-help-button">Didn't Help? Get a tailored result</button>
                 <button id="return-home" onClick={() => nav("/")}>Start Over</button>
             </div>
 

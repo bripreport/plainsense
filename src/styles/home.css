@@ -112,3 +112,15 @@
   color: #444444;
   line-height: 1.5;
 }
+
+#input-error {
+  font-size: 0.9rem;
+  color: #444444;
+  line-height: 1.5;
+
+}
+
+#input-error, 
+#text-help-button{
+  gap: 20px;
+}

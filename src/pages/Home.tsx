@@ -1,7 +1,39 @@
 import "../styles/home.css";
 import Navbar from "../components/Navbar";
+import classifier from "../utils/Classifier";
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 export default function Home() {
+  const nav = useNavigate();
+  const[userInput, setUserInput] = useState("")
+  const[userAlert, setUserAlert] = useState("");
+
+  const getHelp = () => {
+    if(userInput.trim() == ""){
+      setUserAlert("Please describe what you're seeing so PlainSense can help you.")
+
+      return;
+    }
+    if(userInput.length <=3){
+      setUserAlert("Your request is too short. Please describe with more characters.")
+
+      return;
+    }
+
+    setUserAlert("");
+
+    const response = classifier(userInput);
+  
+    localStorage.setItem("matched-response", JSON.stringify(response));
+
+    nav("/results");
+  };
+
+  const handleInputChange = (e:React.ChangeEvent<HTMLTextAreaElement>) => {
+    setUserInput(e.target.value);
+  }
+
   return (
     <div className="home">
       <div className="body">
@@ -17,11 +49,14 @@ export default function Home() {
             <p id="text-input-title">Type or paste in your problem</p>
             <p id="text-input-description">Briefly describe what you're seeing on your computer's screen</p>
             
-            <textarea name="" id="text-input" rows={3}
+            <textarea name="" id="text-input" rows={3} onChange={handleInputChange}
             placeholder={`Ex. "My computer can't connect to wifi" `}>
             </textarea>
+            {userAlert && ( 
+              <p id="input-error">{userAlert}</p>
+            )}
 
-            <button id="text-help-button">Get Help</button>
+            <button id="text-help-button" onClick={getHelp}>Get Help</button>
 
           </div>
 
