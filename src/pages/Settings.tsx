@@ -9,19 +9,23 @@ export default function Settings() {
             <div className="settings-body">
 
                 <div id="text-sizing">
-                    <button>Adjust Text Size</button>
+                    <p>Adjust Text Size</p>
+                    <input type="checkbox" />
                 </div>
 
                 <div id="high-contrast">
-                    <button>Toggle High Contrast</button>
+                    <p>Toggle High Contrast</p>
+                    <input type="checkbox" />
                 </div>
 
                 <div id="dyslexic-font">
-                    <button>Toggle Dyslexic Font</button>
+                    <p>Toggle Dyslexic Font</p>
+                    <input type="checkbox" />
                 </div>
 
                 <div id="lang-translation">
-                    <button>Change Language</button>
+                    <p>Change Language</p>
+                    <input type="checkbox" />
                 </div>
 
             </div>

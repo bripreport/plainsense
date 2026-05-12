@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eeeeee;
 }
 
@@ -24,14 +24,14 @@ input {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #eeeeee;
+  background-color: #b8b8b894;
 }
 
 #screen-container {
   width: 100%;
   max-width: 430px;
   min-height: 100vh;
-  background-color: white;
+  background-color: rgb(245, 245, 245);
   padding: 24px 18px;
 }
 

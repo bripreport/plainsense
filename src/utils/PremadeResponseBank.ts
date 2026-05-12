@@ -7,7 +7,7 @@ export type ProblemType = {
 
 const BasicResponseBank:ProblemType[] = [
   {
-    type: "Wi-Fi or Internet Connection Problem",
+    type: "WiFi or Internet Connection Issue",
     keyword_triggers: ["wifi", "no internet", "wifi signal", "connect to wifi","out","internet went out", "router","no connection","internet connection",],
     steps: [
       "This is can be caused by multiple things but it's a very common issue. Let's try the below steps first.",
@@ -29,14 +29,14 @@ const BasicResponseBank:ProblemType[] = [
     ]
   },
   {
-    type: "Missing File Problem",
-    keyword_triggers: ["missing file", "saved file", "folder","lost document"],
+    type: "Missing File/Folder",
+    keyword_triggers: ["missing file", "files", "saved file", "folder","lost document", "find document", "misplaced file", "misplaced", "documents","documents"],
     steps: [
-      "Your file is still exists. It might simply be in a different place on your computer.",
+      "Your file or folder is still exists. It might simply be in a different place on your computer.",
       "Open the place where you normally keep your files.",
       "Look in 3 different folders on your computer named: \"Downloads\" , \"Documents\", \"Desktop\" ",
-      "If possible, look for a magnifying glass icon and click on it. Type in the name of the file and hit \"Enter\".",
-      "Open the file if you see its name.",
+      "If possible, look for a magnifying glass icon and click on it. Type in the name of the file or folder you want and hit \"Enter\".",
+      "Open the file or folder if you see its name.",
     ]
   },
   {
@@ -52,10 +52,10 @@ const BasicResponseBank:ProblemType[] = [
   },
   {
     type: "Page Could Not Be Found",
-    keyword_triggers: ["404", "not found", "page not found", "missing page", "bad url", "can't find", "could not be found"],
+    keyword_triggers: ["404", "not found", "page not found", "missing page", "bad url", "page could not be found"],
     steps: [
       "This message is from the website, not from your computer.",
-      "It means the web page is not in that place anymore. It's possible the website might have deleted it.",
+      "It means the web page is not in that place anymore. It's possible the website might have deleted or moved it.",
       "Try opening the web page one more time.",
       "If the message stays, go back to the main page of the website.",
       "Try to look for your webpage from the main page."
