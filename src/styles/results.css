@@ -3,6 +3,11 @@
   flex-direction: column;
   gap: 18px;
 }
+.results-page {
+  min-height: 100vh;
+  padding: 1.5rem;
+  padding-bottom: 6rem;
+}
 
 #results-head {
   display: flex;
