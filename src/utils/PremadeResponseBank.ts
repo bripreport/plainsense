@@ -30,7 +30,7 @@ const BasicResponseBank:ProblemType[] = [
   },
   {
     type: "Missing File/Folder",
-    keyword_triggers: ["missing file", "files", "saved file", "folder","lost document", "find document", "misplaced file", "misplaced", "documents","documents"],
+    keyword_triggers: ["missing file", "file is missing", "files", "saved file", "folder","lost document", "find document", "misplaced file", "misplaced", "documents","documents", "file","folder", "file dissapeared", "folder dissapeared"],
     steps: [
       "Your file or folder is still exists. It might simply be in a different place on your computer.",
       "Open the place where you normally keep your files.",
@@ -102,6 +102,16 @@ const BasicResponseBank:ProblemType[] = [
       "Try opening the page again.",
       "If the message stays, check that your WiFi still looks connected.",
       "Try opening the page after checking your WiFi connection."
+    ]
+  },
+  {
+    type: "Google Saying : \"Aw, Snap!\"",
+    keyword_triggers: ["aw snap!", "aw,snap!","aw snap", "aw, snap", "status_access_violation", "browser keeps crashing"],
+    steps: [
+      "You're likely using Google Chrome as your internet browser. While annoying, this is just a temporary issue and there's nothing to \"fix\".",
+      "Refresh the page by clicking the refresh button which looks like a circle with an arrow, near the top left corner of the screen.",
+      "Alternative: Try closing that specific page and then open or go to it again.",
+      "If none of the above options work, just close the browser by clicking the X in the top right corner. Then, reopen the browser and try opening your page again."
     ]
   },
   {

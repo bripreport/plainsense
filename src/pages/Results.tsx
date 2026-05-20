@@ -69,7 +69,7 @@ export default function Results() {
 
             <div id="response-buttons">
                 <button id="more-help-button">Didn't Help? Get a tailored result</button>
-                <button id="return-home" onClick={() => nav("/")}>Start Over</button>
+                <button id="return-home" onClick={() => nav("/")}>Make Another Request</button>
             </div>
 
 

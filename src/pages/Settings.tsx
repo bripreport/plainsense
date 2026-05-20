@@ -1,6 +1,15 @@
+import { useState } from "react";
 import "../styles/settings.css";
 
 export default function Settings() {
+
+    // const [textSize, setTextSize] = useState("");
+    const [highContrast, setHighContrast] = useState(document.body.classList.contains("high-contrast"));
+    // const [dyslexicFont, setDyslexicFont] = useState(false);
+    // const [language, setLanguage] = useState("English");
+
+
+
     return(
         <div className="settings">
             <div className="settings-head">
@@ -15,7 +24,13 @@ export default function Settings() {
 
                 <div id="high-contrast">
                     <p>Toggle High Contrast</p>
-                    <input type="checkbox" />
+                    <input type="checkbox" 
+                    checked={highContrast} 
+                    onChange={(e) => {
+                        setHighContrast(e.target.checked);
+                        document.body.classList.toggle("high-contrast", e.target.checked);
+
+                    }} />
                 </div>
 
                 <div id="dyslexic-font">
