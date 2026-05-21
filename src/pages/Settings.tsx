@@ -16,12 +16,6 @@ export default function Settings() {
                 <h1>General and Accessibilty Settings</h1>
             </div>
             <div className="settings-body">
-
-                <div id="text-sizing">
-                    <p>Adjust Text Size</p>
-                    <input type="checkbox" />
-                </div>
-
                 <div id="high-contrast">
                     <p>Toggle High Contrast</p>
                     <input type="checkbox" 
@@ -31,16 +25,6 @@ export default function Settings() {
                         document.body.classList.toggle("high-contrast", e.target.checked);
 
                     }} />
-                </div>
-
-                <div id="dyslexic-font">
-                    <p>Toggle Dyslexic Font</p>
-                    <input type="checkbox" />
-                </div>
-
-                <div id="lang-translation">
-                    <p>Change Language</p>
-                    <input type="checkbox" />
                 </div>
 
             </div>

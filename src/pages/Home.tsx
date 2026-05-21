@@ -3,29 +3,53 @@ import Navbar from "../components/Navbar";
 import classifier from "../utils/Classifier";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from "react";
+import { promptLLM } from "../api/api-functions";
 
 export default function Home() {
   const nav = useNavigate();
   const[userInput, setUserInput] = useState("")
   const[userAlert, setUserAlert] = useState("");
+  const[loading, setLoading] = useState(false);
 
-  const getHelp = () => {
+  const getHelp = async () => {
     if(userInput.trim() == ""){
       setUserAlert("Please describe what you're seeing so PlainSense can help you.")
-
       return;
     }
-    if(userInput.length <=3){
+    const unprocessable = ["hi", "hello", "hello world", "idk", "help me", "i don't know"]
+
+    if(unprocessable.includes(userInput.trim())){
+      setUserAlert(".")
+      return;
+    }
+    
+    if(userInput.trim().length <=3){
       setUserAlert("Your request is too short. Please describe with more characters.")
-
       return;
     }
 
+    setLoading(true);
     setUserAlert("");
 
     const response = classifier(userInput);
+
+    if(response.route === "llm"){
+      const llmResponse = await promptLLM(userInput);
+      console.log(llmResponse);
+
+      localStorage.setItem("matched-response", JSON.stringify({
+        route: "llm",
+        response: llmResponse,
+        user_input: userInput
+      }));
+    }
+    else{
+      localStorage.setItem("matched-response", JSON.stringify(response));
+      
+    }
+
   
-    localStorage.setItem("matched-response", JSON.stringify(response));
+    
 
     nav("/results");
   };
@@ -56,7 +80,8 @@ export default function Home() {
               <p id="input-error">{userAlert}</p>
             )}
 
-            <button id="text-help-button" onClick={getHelp}>Get Help</button>
+            <button id="text-help-button" onClick={getHelp} disabled={loading}>{loading ? "Loading...": "Get Help"}</button>
+            
 
           </div>
 

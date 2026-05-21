@@ -1,10 +1,10 @@
 import ResponseBank from "./PremadeResponseBank";
 
-
-
 export default function Classifier(s:string){
     const input: string = s.toLowerCase().trim();
-    const inputWords = input.split(/\s+/);
+    
+    const removePunctuation = input.replace(/[.,;:!?]/g, "");
+    const inputWords = removePunctuation.split(/\s+/);
 
     let match = null;
     let currentMax = 0;
@@ -13,16 +13,14 @@ export default function Classifier(s:string){
     for(const response of ResponseBank){
         let score = 0;
 
-        
-
         for(const keyword of response.keyword_triggers){
             const keywordfix = keyword.toLowerCase();
 
-            if(inputWords.includes(keywordfix)){
-                score += 1;
-            }
-            else if(keywordfix.includes(" ") && input.includes(keywordfix)){
+            if(keywordfix.includes(" ") && input.includes(keywordfix)){
                 score += 5;
+            }
+            else if(inputWords.includes(keywordfix)){
+                score += 1;
             }
         }
 

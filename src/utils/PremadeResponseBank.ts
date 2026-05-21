@@ -8,7 +8,7 @@ export type ProblemType = {
 const BasicResponseBank:ProblemType[] = [
   {
     type: "WiFi or Internet Connection Issue",
-    keyword_triggers: ["wifi", "no internet", "wifi signal", "connect to wifi","out","internet went out", "router","no connection","internet connection",],
+    keyword_triggers: ["wifi","wi-fi","no internet", "wifi signal", "connect to wifi","out","internet went out", "router","no connection","internet connection",],
     steps: [
       "This is can be caused by multiple things but it's a very common issue. Let's try the below steps first.",
       "Find The WiFi symbol on your screen.",
@@ -19,7 +19,7 @@ const BasicResponseBank:ProblemType[] = [
   },
     {
     type: "Password or Sign-In Problem",
-    keyword_triggers: ["password", "sign in", "login", "account","reset password", "forgot password", "can't get in", "authentication", "log in", "failed attempts"],
+    keyword_triggers: ["password", "sign in", "login", "account","reset password", "forgot password", "can't get in", "authentication", "log in", "failed attempts", "forgot my password"],
     steps: [
       "Your information is still safe. This often comes down to one small detail like a mistyped letter or number",
       "If you see you've been locked out or not are able to enter information, please wait 5 to 10 minutes and try again.",
@@ -109,7 +109,7 @@ const BasicResponseBank:ProblemType[] = [
     keyword_triggers: ["aw snap!", "aw,snap!","aw snap", "aw, snap", "status_access_violation", "browser keeps crashing"],
     steps: [
       "You're likely using Google Chrome as your internet browser. While annoying, this is just a temporary issue and there's nothing to \"fix\".",
-      "Refresh the page by clicking the refresh button which looks like a circle with an arrow, near the top left corner of the screen.",
+      "Refresh the page by clicking the \"Reload\" button in the middle of the screen, or click the refresh button which looks like a circle with an arrow, near the top left corner of the screen.",
       "Alternative: Try closing that specific page and then open or go to it again.",
       "If none of the above options work, just close the browser by clicking the X in the top right corner. Then, reopen the browser and try opening your page again."
     ]
